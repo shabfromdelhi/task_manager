@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #ffffff;
+    font-family: 'nunito' , 'arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    color: #3F334D;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.welcome {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 36px;
+}
+
+.login,
+.signup {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.placeholder {
+    display: grid;
+    padding: 5px;
+    font-size: 30px;
+    border-bottom: #3F334D;
+}
+
+.placeholder input {
+    margin-top: 10px;
+    border: none;
+}
+
+input[type=email],
+input[type=password],
+input[type=username],
+input[type=confirm-password] 
+{
+    width: 100%;
+    border-bottom: 1px solid #3F334D;
+    padding: 4px;
+}
+
+#email,
+#user-name,
+#password,
+#confirm-password {
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    float: right;
+    margin-right: 25%;
+    padding: 4px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.bottom {
+    margin-left: 25.7%;
+    margin-top: 10%;
+}
+
+.log-in {
+    margin-top: -35px;
+}
+
+.sign-up {
+    margin-top: -40px;
+}
+
+.log-in:link,
+.log-in:visited,
+.sign-up:link,
+.sign-up:visited{
+    float: right;
+    padding: 10px 30px;
+    font-weight: 300;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-colo 0.2s, border 0.2s, color 0.2s;
+    
+
+}
+
+.log-in:link,
+.log-in:visited,
+.sign-up:link,
+.sign-up:visited{
+    background-color: #3F334D;
+    margin-right: 35%;
+    border-color: 1px solid #3F334D;
+    color: #ffffff;
+}
+
+.log-in:hover,
+.log-in:active,
+.sign-up:hover,
+.sign-up:active {
+    background-color: #3c2853;
+}
+
+.sign_in {
+    margin-top: 10.5px;
+}
+
+.signin {
+    text-decoration: none; 
+    margin-top: 10.5px; 
+}
+
+.already-account {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.already__account {
+    margin-top: 20px;
+}
+
+.login-with,
+.continue-with {
+    margin-left: 45%;
+    margin-top: 80px;
+}
+
+.login-icons {
+    display: flex;
+    list-style: none;
+    margin-bottom: 10%;
+}
+
+input:focus {
+    outline: none;
+}
