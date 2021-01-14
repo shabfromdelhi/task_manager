@@ -337,3 +337,11 @@ input[type=createlist] {
 .proceed:active {
     background-color: #3c2853;
 }
+
+.password-icon {
+    position: absolute;
+    margin-left: 26rem;
+    margin-top: 2.6rem;
+    font-size: 1.2rem;
+    color: #3f334da4;
+}
