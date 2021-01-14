@@ -18,12 +18,17 @@ body {
     margin: 0 auto;
 }
 
-
-.welcome {
+h1 {
     text-align: center;
     margin-top: 150px;
     font-size: 36px;
 }
+
+/* .welcome {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 36px;
+} */
 
 .login,
 .signup {
@@ -82,6 +87,8 @@ input[type=confirm-password]
     margin-top: -40px;
 }
 
+
+
 .log-in:link,
 .log-in:visited,
 .sign-up:link,
@@ -113,6 +120,8 @@ input[type=confirm-password]
     background-color: #3c2853;
 }
 
+
+
 .sign_in {
     margin-top: 10.5px;
 }
@@ -123,12 +132,11 @@ input[type=confirm-password]
 }
 
 .already-account {
-    margin-top: 10px;
     text-decoration: none;
 }
 
-.already__account {
-    margin-top: 20px;
+.already_account {
+    margin-top: -45px;
 }
 
 .login-with,
@@ -139,10 +147,193 @@ input[type=confirm-password]
 
 .login-icons {
     display: flex;
+    margin-left: 42%;
     list-style: none;
     margin-bottom: 10%;
+    font-size: 200%;
+}
+
+.login_icons { 
+    display: flex;
+    margin-left: 44%;
+    list-style: none;
+    margin-bottom: 10%;
+    font-size: 200%;
+}
+
+.facebook_icon,
+.google_icon {
+    padding: 4%;
+    color: #3375cc;
+}
+
+i {
+    color: #4076c5;
 }
 
 input:focus {
     outline: none;
+}
+
+/* 
+-------------------------------------
+----------continue profile-----------
+-------------------------------------  */
+
+.upper_border {
+    padding: 40px;
+    background-color: #3F334D;
+}
+
+.profile_info {
+    float: right;
+    padding: 6px 18px;
+    background-color: #ffffff;
+    color: #3F334D;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 80%;
+    margin-top: -24px;
+}
+
+.continue_h1 {
+    margin-top: 8%;
+    text-align: center;
+}
+
+.continue_icon {
+    display: flex;
+}
+
+.individual {
+    padding: 8%;
+    margin-left: 20%;
+}
+
+.team {
+    padding: 8%;
+}
+
+.para_individual {
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+.para_team {
+    margin-left: 55px;
+    text-decoration: none;
+}
+
+
+.continue:link,
+.continue:visited {
+    float: right;
+    padding: 10px 30px;
+    font-weight: 300;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-colo 0.2s, border 0.2s, color 0.2s;
+    
+
+}
+
+.continue:link,
+.continue:visited {
+    background-color: #3F334D;
+    margin-right: 47%;
+    margin-bottom: 5%;
+    border-color: 1px solid #3F334D;
+    color: #ffffff;
+}
+
+.continue:hover,
+.continue:active {
+    background-color: #3c2853;
+}
+
+
+/* 
+-------------------------------------
+----------Create list-----------
+-------------------------------------  */
+
+.upper_border {
+    padding: 40px;
+    background-color: #3F334D;
+}
+
+.profile_info {
+    float: right;
+    padding: 6px 18px;
+    background-color: #ffffff;
+    color: #3F334D;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 80%;
+    margin-top: -24px;
+}
+
+
+.create_list_placeholder {
+    text-align: center;
+    display: grid;
+    padding: 5px;
+    font-size: 30px;
+    border-bottom: #3F334D;
+    margin-left: 30%;
+}
+
+.create_list_placeholder input {
+    margin-top: 80px;
+    border: none;
+}
+
+input[type=createlist] {
+    width: 60%;
+    border-bottom: 1px solid #3F334D;
+    padding: 4px;
+}
+
+.add_more {
+    font-size: 18px;
+    color: #3F334D;
+    text-decoration: none;
+    margin-top: 4%;
+    margin-right: -65px;
+    padding-bottom: 15%;
+}
+
+/* btn */
+
+.skip:link,
+.skip:visited,
+.proceed:link,
+.proceed:visited {
+    float: right;
+    padding: 10px 30px;
+    font-weight: 300;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-colo 0.2s, border 0.2s, color 0.2s;
+}
+
+.skip:link,
+.skip:visited {
+    border: 1px solid #3F334D;
+    color: #3F334D;
+    margin-right: 42%;
+}
+
+.proceed:link,
+.proceed:visited {
+    background-color: #3F334D;
+    margin-right: -30%;
+    margin-bottom: 5%;
+    border-color: 1px solid #3F334D;
+    color: #ffffff;
+}
+
+.proceed:hover,
+.proceed:active {
+    background-color: #3c2853;
 }
