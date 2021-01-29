@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css"  href="css/style.css">
+  <link rel="stylesheet" type="text/css"  href="css/grid.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <title>Task Manager</title>
+</head>
+<body>
+  <section>
+    <div class="upper_border">
+      <a href="#" class="profile_info taskpage">S</a>
+      <a href="#" class="line_menu">
+          <img src="./css/icons/more-menu.svg" alt="">                    
+      </a>
+    </div>
+    <div>
+      <a href="#" class="btn_addmore">
+        <img src="./css/icons/add-more.svg" alt="">   
+      </a> 
+    </div>
+    <div>
+      <p class="Tasker">Shabnam's Tasks</p>
+    </div>
+    <div class="container">
+      <div class="taskbox">
+            <div class="row justify-content-around page_container">
+              <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 tasks_container p-0"> 
+                <div class="list_header">
+                  <p class="list_name"> To Do</p>
+                  <div class="icon_container">
+                    <img class="header_icon" src="./css/icons/edit.svg" alt="">
+                    <img class="header_icon" src="./css/icons/delete.svg" alt="">
+                  </div>
+                </div>
+            
+                <div class="task_list todo_list">
+                    <p href="#" class="list_item">Untitled <span class="circle"></span> <img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>
+                    <p href="#" class="list_item">Untitled <span class="circle"> </span><img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>
+                </div> 
+                <div class="btn_container">
+                    <a href="#" class="task_btn" data-list="todo_list">+Add another task</a>
+                </div>
+              </div>
+              <!-- In Progress List -->
+              <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 tasks_container p-0"> 
+                <div class="list_header">
+                  <p class="list_name"> In Progress</p>
+                  <div class="icon_container">
+                    <img class="header_icon" src="./css/icons/edit.svg" alt="">
+                    <img class="header_icon" src="./css/icons/delete.svg" alt="">
+                  </div>
+                </div>
+            
+                <div class="task_list in_progress_list">
+                    <p href="#" class="list_item">Untitled <span class="circle"></span> <img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>
+                    <p href="#" class="list_item">Untitled <span class="circle"> </span><img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>
+                </div> 
+                <div class="btn_container">
+                    <a href="#" class="task_btn" data-list="in_progress_list">+Add another task</a>
+                </div>
+              </div>
+              <!-- Done List -->
+              <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 tasks_container p-0"> 
+                <div class="list_header">
+                  <p class="list_name"> Done</p>
+                  <div class="icon_container">
+                    <img class="header_icon" src="./css/icons/edit.svg" alt="">
+                    <img class="header_icon" src="./css/icons/delete.svg" alt="">
+                  </div>
+                </div>
+            
+                <div class="task_list done_list">
+                    <p href="#" class="list_item">Untitled <span class="circle"></span> <img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>
+                    <p href="#" class="list_item">Untitled <span class="circle"> </span><img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>
+                </div> 
+                <div class="btn_container">
+                    <a href="#" class="task_btn" data-list="done_list">+Add another task</a>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+  $(document).ready(function() {
+    $('.btn_addmore').click(function () {
+      let itemName = prompt('Enter the task name')
+      let listName = prompt('Enter the list name you want to add')
+      const listNameMapping = {
+        'To Do': 'todo_list',
+        'In Progress': 'in_progress_list',
+        'Done': 'done_list'
+      }
+      const listClassName = listNameMapping[listName]
+      addListItem(itemName, listClassName)
+    })
+    $('.task_btn').click(function(e) {
+      let listClassName = $(this).data('list');
+
+      let itemName = prompt('Enter the task name')
+      addListItem(itemName, listClassName)
+    })
+  });
+
+  function addListItem(itemName, listClassName) {
+    $(`.${listClassName}`).append('<p href="#" class="list_item">' + itemName + '<span class="circle"> </span><img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>')
+  }
+
+</script>
+</html>
