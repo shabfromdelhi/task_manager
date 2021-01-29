@@ -437,15 +437,9 @@ input[type=phone_number] {
 }
 
 .btn_addmore {
-    width: 4%;
-    float: right;
-    padding: 1%;
-    /* background-color: #3c2853; */
-    margin-top: -1.8%;
-    margin-right: 5.6%;
-    /* border-radius: 75%; */
-    /* color: #ffffff; */
-    /* text-align: center; */
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
 }
 
 .Tasker {
@@ -470,13 +464,32 @@ input[type=phone_number] {
     background: linear-gradient(360deg,#ffffffff 80%, #3F334D 20%);
     border-radius: 1%;
     color: #ffffff;
-    margin-top: 2px;
+    margin-top: 2rem !important;
 }
-
-.to_do,
-.Progess_box,
-.done_box {
+.tasks_container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0;
+    height: fit-content;
+}
+.page_container {
+    height: 100vh;
+}
+.list_name {
     margin-top: 4%;
+}
+.list_header {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3F334D;
+}
+.icon_container {
+    margin-top: .5rem;
+}
+.header_icon {
+    height: 1.2rem;
+    margin-right: 10px;
 }
 
 .add_title,
@@ -495,9 +508,9 @@ input[type=phone_number] {
     margin-right: 4%;
 }
 
-.to_do_list,
-.progress_list,
-.done_list {
+.task_list {
+    padding: 0 .7rem;
+    margin-top: 10%;
     border-bottom: #3F334D;
     font-size: 15px;
     color: #3F334D;
@@ -505,16 +518,32 @@ input[type=phone_number] {
     display: grid;
 }
 
-.untitled,
-.untitled2 {
+.list_item {
     border-bottom: 1px solid #3F334D;
-    margin-top: 10%;
     text-decoration: none;
     color: #3F334D;
+    display: block;
+    padding-bottom: .3rem;
+}
+.list_item_icon {
+    float: right;
+    margin-right: .8rem;
+}
+.list_name {
+    padding-left: .7rem;
+    color: #fff;
+}
+.circle {
+    height: 1rem;
+    width: 1rem;
+    color: red;
+    background-color: #3F334D;
+    border-radius: 50%;
+    float: right;
 }
 
 .untitled2 {
-    margin-bottom: 15%;
+    /* margin-bottom: 15%; */
 }
 
 a[type=untitled],
@@ -537,6 +566,12 @@ a[type=untitled2] {
     margin-right: 40px;
 }
 
+.btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .task_btn:link,
 .task_btn:visited,
 .progress_task_btn:link,
@@ -544,10 +579,10 @@ a[type=untitled2] {
 .done_task_btn:link,
 .done_task_btn:visited {
     padding: 5px 39px;
-    font-weight: 300;
+    /* font-weight: 300; */
     border-radius: 5px;
     text-decoration: none;
-    transition: background-colo 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .task_btn:link,
@@ -557,7 +592,7 @@ a[type=untitled2] {
 .done_task_btn:link,
 .done_task_btn:visited {
     background-color: #3F334D;
-    margin-right: 2.5%;
+    /* margin-right: 2.5%; */
     margin-left: -1%;
     margin-bottom: 5%;
     border-color: 1px solid #3F334D;
