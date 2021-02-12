@@ -104,14 +104,35 @@
     $('.task_btn').click(function(e) {
       let listClassName = $(this).data('list');
 
-      let itemName = prompt('Enter the task name')
-      addListItem(itemName, listClassName)
+      let itemName = prompt('Enter the task name') // At this point we have the item name added by user.
+      let num = prompt('How many times do you want to add this task') // At this point we have the number of times user wants to add a particular task.
+
+      for (let i = 0; i < num; i++) {
+        addListItem(itemName, listClassName)
+      }
+      
     })
   });
 
   function addListItem(itemName, listClassName) {
+    console.log('Add list Item function called')
     $(`.${listClassName}`).append('<p href="#" class="list_item">' + itemName + '<span class="circle"> </span><img class="list_item_icon" src="./css/icons/calendar.svg" alt=""></p>')
   }
+
+  // let color = prompt('Enter the color ')
+  // if (color === 'black') {
+  //   matchedColor = 'grey'
+  //   console.log('Black will go with ' + matchedColor)
+  // } else if (color === 'blue') {
+  //   matchedColor = 'white'
+  //   console.log('Blue will go with ' + matchedColor)
+  // } else {
+  //   console.log(color + ' will look best with black')
+  // }
+
+
+
+
 
 </script>
 </html>
